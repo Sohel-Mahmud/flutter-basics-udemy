@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mi_card/dice_page.dart';
+import 'package:mi_card/quizzler_page.dart';
+import 'package:mi_card/xylophone_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -101,6 +103,26 @@ class FirstSreen extends StatelessWidget {
                 ));
               },
               child: Text('DICEE', style: TextStyle(fontSize: 20)),
+            ),
+
+            RaisedButton(
+              color: Colors.blue[300],
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute<void>(
+                  builder: (BuildContext context) => XylophonePage()
+                ));
+              },
+              child: Text('Xylophone', style: TextStyle(fontSize: 20)),
+            ),
+
+            RaisedButton(
+              color: Colors.green[300],
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute<void>(
+                  builder: (BuildContext context) => QuizzlerPage()
+                ));
+              },
+              child: Text('QUIZZLER', style: TextStyle(fontSize: 20)),
             ),
           ],
         ),
